@@ -1,0 +1,78 @@
+/* Login.module.css */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://img.freepik.com/free-vector/gradient-network-connection-background_23-2148865392.jpg');
+}
+
+.content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.header h2 {
+    margin: 0;
+}
+
+.form_group {
+    margin-bottom: 15px;
+}
+
+.form_group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form_group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.message_errors {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.inp_form {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.inp_form:hover {
+    background-color: #0056b3;
+}
+
+.wrap {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.wrap a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.wrap a:hover {
+    text-decoration: underline;
+}

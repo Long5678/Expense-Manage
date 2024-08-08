@@ -1,0 +1,80 @@
+/* Register.module.css */
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content_login_left {
+    background-image: url('https://img.freepik.com/free-vector/gradient-network-connection-background_23-2148865392.jpg');
+    color: white;
+    padding: 20px;
+}
+
+.content_login_right {
+    background-color: #ffffff;
+    color: #333;
+    padding: 20px;
+}
+
+.form_user {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form_group {
+    margin-bottom: 15px;
+}
+
+.form_group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form_group input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.message_errors {
+    color: red;
+    font-size: 12px;
+}
+
+.inp_form {
+    width: 100%;
+    padding: 10px;
+    background-color: #0044cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.inp_form:hover {
+    background-color: #003399;
+}
+
+.wrap {
+    margin-top: 20px;
+}
+
+.wrap a {
+    color: #0044cc;
+    text-decoration: none;
+}
+
+.wrap a:hover {
+    text-decoration: underline;
+}
