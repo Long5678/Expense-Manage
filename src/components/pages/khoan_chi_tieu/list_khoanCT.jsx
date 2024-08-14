@@ -14,8 +14,9 @@ function List_khoanCT() {
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Name</th>
-                    {/* <th scope="col">Type of spending</th> */}
+                    <th scope="col">Type of spending</th>
                     <th scope="col">Amount of money</th>
+                    <th scope="col">Description</th>
                     <th scope="col">Date</th>
                     <th scope="col"></th>
                 </tr>

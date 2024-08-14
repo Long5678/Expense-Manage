@@ -22,7 +22,7 @@ export const danhmucSlice = createSlice({
             // nó sẽ lọc ra tk có id khác với id đc gửi lên (action.payload)
         },
         editDanhmuc(state, action) {
-            const index = state.danhmucDatas.findIndex((item) => item._id === action.payload._id);
+            const index = state.danhmucDatas.findIndex(item => item._id === action.payload._id);
             if (index !== -1) {
                 state.danhmucDatas[index] = action.payload;
             }

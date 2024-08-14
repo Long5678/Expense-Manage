@@ -4,13 +4,13 @@ function Tk_tien() {
   return <>
       <div className='box-btn-baocao'>
           <Button variant="contained" color="success" size="large">
-              Ngân Sách : <span>9.500.000 VNĐ</span>
+              Budget: $300
           </Button>
           <Button variant="contained" size="large">
-              Tổng Chi : <span>3.500.000 VNĐ</span>
+          Total Expenses: $1000
           </Button>
           <Button variant="contained" color="secondary" size="large">
-              Số Dư : <span>6.000.000 VNĐ</span>
+          Expected Spending: $2500
           </Button>
       </div>
   </>

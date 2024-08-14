@@ -37,18 +37,20 @@ export function handleLoadDanhmuc(idUser) {
     }
 }
 
-// export function handleEditDanhMuc(id){
-//     return async (dispatch) => {
-//         try {
-//             let res = await axios.put(`http://localhost:3000/danhmuc/edit/${id}`);
-//             let data = res.data;
-//             dispatch(editDanhmuc(data))
-//         } catch (error) {
-//             console.log(error);
-            
-//         }
-//     }
-// }
+export function handleEditDanhMuc() {
+    return async (dispatch) => {
+        try {
+            let res = await axios.get(`http://localhost:3000/danhmuc/edit/${id}`);
+            let id = res.data.findId;
+            dispatch(loadDanhmuc({id})); // Send the action with updated data
+            console.log(id);
+
+        } catch (error) {
+            console.log("Cập nhật danh mục thất bại", error);
+        }
+    };
+}
+
 
 export function handleDeleteDM(id) {
     return async (dispatch) => {
@@ -118,7 +120,7 @@ export function handleDeleteNgansach(id){
     }
 }
 
-export function handleAddChiTieu(name, price, mota, ngaythang, iddm, idUser){
+export function handleAddChiTieu(name, price, mota, ngaythang, name_dm, idUser){
     return async(dispatch) =>{
         try {
             let res = await axios.post("http://localhost:3000/chiphi/create",{
@@ -126,11 +128,11 @@ export function handleAddChiTieu(name, price, mota, ngaythang, iddm, idUser){
                 price: price,
                 mota: mota,
                 ngaythang: ngaythang,
-                iddm: iddm,
+                name_dm:name_dm,
                 idUser: idUser,
             })
             let _id = res.data.insertedId;
-            dispatch(addChiTieu({ _id, name, price, mota, ngaythang, iddm, idUser }))
+            dispatch(addChiTieu({ _id, name, price, mota, ngaythang, name_dm, idUser }))
         } catch (error) {
             console.log(error);
             

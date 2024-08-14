@@ -29,11 +29,11 @@ function Aside_admin() {
 
                   <ListItem className='li_item' disablePadding>
                       <ListItemButton>
-                          <ListItemText primary="User" />
+                          <a href="/admin/user"><ListItemText primary="User" /></a>
                       </ListItemButton>
                   </ListItem>
 
-                  <div><a href="/">Đăng xuất</a></div>
+                  <div><a href="/">Trang Chủ</a></div>
 
               </List>
 

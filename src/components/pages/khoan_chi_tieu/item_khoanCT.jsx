@@ -7,10 +7,9 @@ function Item_khoanCT({_id, name, price, ngaythang, mota, name_dm, index}) {
       <tr>
           <th scope="row">{index+1}</th>
           <td className='td-name'>{name}</td>
-          {/* <td>{name_dm}</td> */}
-          <td>{mota}</td>
+          <td>{name_dm}</td>
           <td>${price}</td>
-
+          <td>{mota}</td>
           <td>{ngaythang}</td>
           <td>
               <div className='box-btn'>

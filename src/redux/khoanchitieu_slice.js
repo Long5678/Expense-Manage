@@ -22,4 +22,16 @@ export const chitieuSlice = createSlice({
     },
 });
 
+export const selectTotalExpensesByCategory = (state) => {
+    const grouped = state.chitieu.chitieuDatas.reduce((acc, item) => {
+        acc[item.name_dm] = (acc[item.name_dm] || 0) + Number(item.price || 0);
+        return acc;
+    }, {});
+
+    return Object.entries(grouped).map(([name_dm, total]) => ({
+        name_dm,
+        total,
+    }));
+};
+
 export const {addChiTieu, loadChiTieu, chitieuDatas, deleteChiTieu} = chitieuSlice.actions

@@ -173,7 +173,7 @@ function Header() {
                                 onClose={handleCloseUserMenu}
                             >
                                 <MenuItem onClick={handleCloseUserMenu}>
-                                    <Typography textAlign="center">Admin</Typography>
+                                    <Typography textAlign="center"><a href="/admin">Admin</a></Typography>
                                 </MenuItem>
                                 <MenuItem onClick={logOut}>
                                     <Typography textAlign="center">Logout</Typography>

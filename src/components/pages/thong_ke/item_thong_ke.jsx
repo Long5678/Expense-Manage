@@ -1,19 +1,15 @@
 import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import Button from '@mui/material/Button';
+import { useDispatch } from 'react-redux';
 
-function Item_thong_ke() {
+function Item_thong_ke({_id, name, price, ngaythang, name_dm, mota}) {
   return <>
       <TableRow>
-          <TableCell className='td-name' component="th" scope="row">Tiền điện</TableCell>
-          <TableCell align="right">Hóa đơn</TableCell>
-          <TableCell className='td-price' align="right">900.000 VNĐ</TableCell>
-          <TableCell align="right">28-11-2024</TableCell>
-          <TableCell align="right">
-              <Button variant="contained" color="success">
-                  Chi tiết
-              </Button>
-          </TableCell>
+          <TableCell className='td-name' component="th" scope="row" align="center">{name}</TableCell>
+          <TableCell align="center">{name_dm}</TableCell>
+          <TableCell className='td-price' align="center">${price}</TableCell>
+          <TableCell align="center">{ngaythang}</TableCell>
       </TableRow>
   </>
 }

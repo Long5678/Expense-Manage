@@ -6,7 +6,7 @@ const Main_context = createContext();
 const MainProvider = ({ children }) => {
     let [userToken, setUserToken] = useState("");  // state này để chưa storage được giải mã khi người dùng login vào
     const [isPopupVisible, setPopupVisible] = useState(false); // state này để ẩn hiện popup khi click vào thêm mới
-
+    const [isEditPopupVisible, setEditPopupVisible] = useState(false);
     const token = JSON.parse(localStorage.getItem('token_React'));
     useEffect(() => {
         if (token) {
@@ -44,9 +44,13 @@ const MainProvider = ({ children }) => {
         setPopupVisible(!isPopupVisible);
     }
 
+    function handleEditPopup() {
+        setEditPopupVisible(!isEditPopupVisible);
+    }
+
 
     return <>
-        <Main_context.Provider value={{ userToken, logOut, setUserToken, isPopupVisible, setPopupVisible, handlePopup }}>
+        <Main_context.Provider value={{ userToken, logOut, setUserToken, isPopupVisible, setPopupVisible, handlePopup, handleEditPopup, setEditPopupVisible, isEditPopupVisible }}>
             {children}
         </Main_context.Provider>
     </>
